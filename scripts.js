@@ -2,6 +2,7 @@ const api = '5dc22fb4222cb58ae5006f74522d2a03';
 
 const iconImg = document.getElementById('weather-icon');
 const loc = document.querySelector('#location');
+const date = document.querySelector('.date');
 const tempC = document.querySelector('.c');
 const tempF = document.querySelector('.f');
 const desc = document.querySelector('.desc');
@@ -11,6 +12,7 @@ const sunsetDOM = document.querySelector('.sunset');
 window.addEventListener('load', () => {
     let long;
     let lat;
+    date.textContent = Date();
 
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((position) => {
